@@ -77,7 +77,7 @@ def search_bm25(query):
     return [(doc_id, score) for doc_id, score in ranked_docs if score > 0]
    
 
-#Συνάρτηση για υπολογισμό cosine similarity
+#Συνάρτηση για υπολογισμό με Vector Space Model
 def search_vsm(query):
     query_vector = tfidf_vector.transform([query]).toarray()
     doc_vectors = tfidf_matrix.toarray()
